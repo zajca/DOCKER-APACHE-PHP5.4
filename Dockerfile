@@ -28,5 +28,10 @@ RUN pecl install mongo yaml
 #INSTALL COMPOSER
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin && mv /usr/local/bin/composer.phar /usr/local/bin/composer
 
+# Add image configuration and scripts
+ADD start.sh /start.sh
+ADD run.sh /run.sh
+RUN chmod 755 /*.sh
+ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 #EXPOSE 9001
