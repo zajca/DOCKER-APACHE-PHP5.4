@@ -35,3 +35,4 @@ RUN chmod 755 /*.sh
 ADD supervisord-apache2.conf /etc/supervisor/conf.d/supervisord-apache2.conf
 
 #EXPOSE 9001
+CMD ["/run.sh"]
