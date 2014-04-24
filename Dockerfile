@@ -4,7 +4,7 @@ MAINTAINER Martin Zajic <zajca@zajca.cz>
 
 
 #ADD PHP5.4 REPOSITORY
-RUN echo "deb http://ppa.launchpad.net/ondrej/php5/ubuntu precise main " > /etc/apt/sources.list.d/ondrej.list &&  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
+RUN echo "deb http://ppa.launchpad.net/ondrej/php5-oldstable/ubuntu precise main " > /etc/apt/sources.list.d/ondrej.list &&  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E5267A6C
 
 #UPDATE SYSTEM
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -qqy install \
